@@ -48,7 +48,7 @@ FROM            Departments INNER JOIN
   <xs:element name="Employee" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Employee" msprop:Generator_UserDSName="Employee">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DTAEmployee" msprop:Generator_TableClassName="DTAEmployeeDataTable" msprop:Generator_TableVarName="tableDTAEmployee" msprop:Generator_RowChangedName="DTAEmployeeRowChanged" msprop:Generator_TablePropName="DTAEmployee" msprop:Generator_RowDeletingName="DTAEmployeeRowDeleting" msprop:Generator_RowChangingName="DTAEmployeeRowChanging" msprop:Generator_RowEvHandlerName="DTAEmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="DTAEmployeeRowDeleted" msprop:Generator_RowClassName="DTAEmployeeRow" msprop:Generator_UserTableName="DTAEmployee" msprop:Generator_RowEvArgName="DTAEmployeeRowChangeEvent">
+        <xs:element name="DTAEmployee" msprop:Generator_TableClassName="DTAEmployeeDataTable" msprop:Generator_TableVarName="tableDTAEmployee" msprop:Generator_TablePropName="DTAEmployee" msprop:Generator_RowDeletingName="DTAEmployeeRowDeleting" msprop:Generator_RowChangingName="DTAEmployeeRowChanging" msprop:Generator_RowEvHandlerName="DTAEmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="DTAEmployeeRowDeleted" msprop:Generator_UserTableName="DTAEmployee" msprop:Generator_RowChangedName="DTAEmployeeRowChanged" msprop:Generator_RowEvArgName="DTAEmployeeRowChangeEvent" msprop:Generator_RowClassName="DTAEmployeeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -83,7 +83,7 @@ FROM            Departments INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EmployeList" msprop:Generator_TableClassName="EmployeListDataTable" msprop:Generator_TableVarName="tableEmployeList" msprop:Generator_TablePropName="EmployeList" msprop:Generator_RowDeletingName="EmployeListRowDeleting" msprop:Generator_RowChangingName="EmployeListRowChanging" msprop:Generator_RowEvHandlerName="EmployeListRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeListRowDeleted" msprop:Generator_UserTableName="EmployeList" msprop:Generator_RowChangedName="EmployeListRowChanged" msprop:Generator_RowEvArgName="EmployeListRowChangeEvent" msprop:Generator_RowClassName="EmployeListRow">
+        <xs:element name="EmployeList" msprop:Generator_TableClassName="EmployeListDataTable" msprop:Generator_TableVarName="tableEmployeList" msprop:Generator_RowChangedName="EmployeListRowChanged" msprop:Generator_TablePropName="EmployeList" msprop:Generator_RowDeletingName="EmployeListRowDeleting" msprop:Generator_RowChangingName="EmployeListRowChanging" msprop:Generator_RowEvHandlerName="EmployeListRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeListRowDeleted" msprop:Generator_RowClassName="EmployeListRow" msprop:Generator_UserTableName="EmployeList" msprop:Generator_RowEvArgName="EmployeListRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -94,7 +94,7 @@ FROM            Departments INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DepartmentEmployees" msprop:Generator_TableClassName="DepartmentEmployeesDataTable" msprop:Generator_TableVarName="tableDepartmentEmployees" msprop:Generator_TablePropName="DepartmentEmployees" msprop:Generator_RowDeletingName="DepartmentEmployeesRowDeleting" msprop:Generator_RowChangingName="DepartmentEmployeesRowChanging" msprop:Generator_RowEvHandlerName="DepartmentEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="DepartmentEmployeesRowDeleted" msprop:Generator_UserTableName="DepartmentEmployees" msprop:Generator_RowChangedName="DepartmentEmployeesRowChanged" msprop:Generator_RowEvArgName="DepartmentEmployeesRowChangeEvent" msprop:Generator_RowClassName="DepartmentEmployeesRow">
+        <xs:element name="DepartmentEmployees" msprop:Generator_TableClassName="DepartmentEmployeesDataTable" msprop:Generator_TableVarName="tableDepartmentEmployees" msprop:Generator_RowChangedName="DepartmentEmployeesRowChanged" msprop:Generator_TablePropName="DepartmentEmployees" msprop:Generator_RowDeletingName="DepartmentEmployeesRowDeleting" msprop:Generator_RowChangingName="DepartmentEmployeesRowChanging" msprop:Generator_RowEvHandlerName="DepartmentEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="DepartmentEmployeesRowDeleted" msprop:Generator_RowClassName="DepartmentEmployeesRow" msprop:Generator_UserTableName="DepartmentEmployees" msprop:Generator_RowEvArgName="DepartmentEmployeesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -102,6 +102,15 @@ FROM            Departments INNER JOIN
               <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
               <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" type="xs:string" minOccurs="0" />
               <xs:element name="Department" msprop:Generator_ColumnVarNameInTable="columnDepartment" msprop:Generator_ColumnPropNameInRow="Department" msprop:Generator_ColumnPropNameInTable="DepartmentColumn" msprop:Generator_UserColumnName="Department" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Department" msprop:Generator_TableClassName="DepartmentDataTable" msprop:Generator_TableVarName="tableDepartment" msprop:Generator_TablePropName="Department" msprop:Generator_RowDeletingName="DepartmentRowDeleting" msprop:Generator_RowChangingName="DepartmentRowChanging" msprop:Generator_RowEvHandlerName="DepartmentRowChangeEventHandler" msprop:Generator_RowDeletedName="DepartmentRowDeleted" msprop:Generator_UserTableName="Department" msprop:Generator_RowChangedName="DepartmentRowChanged" msprop:Generator_RowEvArgName="DepartmentRowChangeEvent" msprop:Generator_RowClassName="DepartmentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="Department" msprop:Generator_ColumnVarNameInTable="columnDepartment" msprop:Generator_ColumnPropNameInRow="Department" msprop:Generator_ColumnPropNameInTable="DepartmentColumn" msprop:Generator_UserColumnName="Department" type="xs:string" minOccurs="0" />
+              <xs:element name="Manager" msprop:Generator_ColumnVarNameInTable="columnManager" msprop:Generator_ColumnPropNameInRow="Manager" msprop:Generator_ColumnPropNameInTable="ManagerColumn" msprop:Generator_UserColumnName="Manager" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -117,6 +126,10 @@ FROM            Departments INNER JOIN
     </xs:unique>
     <xs:unique name="DepartmentEmployees_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:DepartmentEmployees" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="Department_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Department" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
   </xs:element>

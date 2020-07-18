@@ -126,12 +126,18 @@ namespace EplangoTask.Controllers
             List<Department> allDepartment = new List<Department>();
             allDepartment = db.Departments.ToList();
             var departments = db.Departments.Include(d => d.Employee).ToList();
+            var customDep = db.Departments.Select(x => new
+            {
+                id = x.DepartmentId,
+                Department = x.DeptName,
+                Manager = x.Employee.Name,
 
+            }).ToList();
 
             ReportDocument rd = new ReportDocument();
             rd.Load(Path.Combine(Server.MapPath("~/CrystalReports"), "ReportDepartment.rpt"));
 
-            rd.SetDataSource(allDepartment);
+            rd.SetDataSource(customDep);
 
             Response.Buffer = false;
             Response.ClearContent();

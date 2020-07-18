@@ -18,11 +18,17 @@ namespace EplangoTask.CrystalReports
             Company_Entities entities = new Company_Entities();
             List<Department> allDepartment = new List<Department>();
             allDepartment = entities.Departments.ToList();
-            //crystalReport.SetDataSource(allDepartment);
-            //CrystalReportViewer1.ReportSource = crystalReport;
-            //CrystalReportViewer1.RefreshReport();
+
+            var customDep = entities.Departments.Select(x => new
+            {
+                id = x.DepartmentId,
+                Department = x.DeptName,
+                Manager = x.Employee.Name,
+              
+            }).ToList();
+
             ReportDepartment rpt = new ReportDepartment();
-            rpt.SetDataSource(allDepartment);
+            rpt.SetDataSource(customDep);
             CrystalReportViewer1.ReportSource = rpt;
                 //ViewerCore
                 
