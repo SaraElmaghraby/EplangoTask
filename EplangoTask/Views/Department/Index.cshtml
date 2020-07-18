@@ -1,0 +1,54 @@
+﻿@model IEnumerable<EplangoTask.Models.Department>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Department</h2>
+
+<div>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.DeptName)*@
+            Department
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Employee.Name)*@
+            Manager Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeptName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DepartmentId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DepartmentId })|
+                @Html.ActionLink("Department Details", "../DepartmentDetails/DepartmentDetails", new { id = item.DepartmentId })
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="row">
+    <div class="col-md-4">
+        <a href="@Url.Action("ExportDepartment")"> Download PDF </a>
+    </div>
+    <div class="col-md-4">
+        <a href="~/CrystalReports/ReportDepartment.aspx">View PDF</a>
+    </div>
+
+</div>
+
